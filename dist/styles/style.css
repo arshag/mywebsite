@@ -9,21 +9,14 @@ body {
 	font-size: 2em;
 	background-color: whitesmoke;
 }
-/* Grid container for entire page */
-.container {
-	display: grid;
-	grid-template-columns: repeat(6,1fr);
-	grid-template-rows: 20vh 80vh 650px;
-}
 
 /* Navigation section */
 /* First grid item is also a flex container */
 ul {
-  grid-column: 1/span 6;
-  grid-row: 1;
+  display:flex;
   justify-content: space-around;
   align-items: center;
-  display: flex;
+  height: 20vh;
 }
 /* items in the flex container */
 ul li {
@@ -47,16 +40,17 @@ ul a:visited:active {
 /* Hero section */
 /* Second grid item - also a flex container */
 .hero  {
-  grid-column: 1/span 6;
-  grid-row: 2;
-  justify-content: center;
-  align-items: center;
+  
   background-image: url("../images/hot-air-balloons3.jpg");
   background-size: cover;
   background-position: center;
-  display: flex;
+  display:flex;
+  height: 80vh;
+  justify-content:center;
+	align-items:center;
 }
 .hero h1 {
+	
 	padding-top: 5px;
 	font-size: 100px;
 	text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.2em goldenrod;
@@ -65,8 +59,7 @@ ul a:visited:active {
 /* Main content */
 /* The third grid item, and a flex container for images */
 .wrapper {
-	grid-column: 1/span 6;
-	grid-row: 3;
+	margin-top: 1.5em;
 	display: flex;
 	align-items: flex-start;
 }
@@ -82,12 +75,11 @@ ul a:visited:active {
 .img1 {
 	width: 100%;
 }
-/*
+
 .img1:hover {
-	height: 100%;
-	object-fit: cover;
+	transform: scale(1.5);
 }
-*/
+
 /* Media queries for devices less than 601 pixels wide */
 @media only screen and (max-width: 600px) {
 	ul {
