@@ -1,23 +1,25 @@
 /* general properties */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-	font-family: sans-serif;
-	font-size: 2em;
-	background-color: whitesmoke;
+  font-family: sans-serif;
+  font-size: 2em;
+  background-color: whitesmoke;
 }
 
 /* Navigation section */
 /* First grid item is also a flex container */
 ul {
-  display:flex;
+  display: flex;
   justify-content: space-around;
   align-items: center;
   height: 20vh;
 }
+
 /* items in the flex container */
 ul li {
   list-style-type: none;
@@ -33,66 +35,63 @@ ul a:hover,
 ul a:visited:hover,
 ul a:active,
 ul a:visited:active {
-  color: black;
+  color: #150d57;
   text-decoration: underline;
 }
 
 /* Hero section */
 /* Second grid item - also a flex container */
-.hero  {
-  
+.hero {
   background-image: url("../images/hot-air-balloons3.jpg");
   background-size: cover;
   background-position: center;
-  display:flex;
+  display: flex;
   height: 80vh;
-  justify-content:center;
-	align-items:center;
+  justify-content: center;
+  align-items: center;
 }
-.hero h1 {
 
-	padding-top: 5px;
-	font-size: 100px;
-	text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.2em goldenrod;
+.hero h1 {
+  padding-top: 5px;
+  font-size: 100px;
+  text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.2em goldenrod;
 }
 
 /* Main content */
 /* The third grid item, and a flex container for images */
 .wrapper {
-	margin-top: 1.5em;
-	display: flex;
-	align-items: flex-start;
+  margin-top: 1.5em;
+  display: flex;
+  align-items: flex-start;
 }
+
 .wrapper > div {
-	flex: 1 1 15vw;
-	/*transition: all 1000ms cubic-bezier(.14, .69, .93, 1);*/
-	
+  flex: 1 1 15vw;
+  /*transition: all 1000ms cubic-bezier(.14, .69, .93, 1);*/
 }
+
 /*
 .wrapper > div:hover  {
 	flex-basis: 35vw;
 }*/
 .img1 {
-	width: 100%;
+  width: 100%;
 }
 
 .img1:hover {
-	transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 /* Media queries for devices less than 601 pixels wide */
 @media only screen and (max-width: 600px) {
-	ul {
-		flex-direction: column;
-	}
-	.wrapper {
-		flex-direction: column;
-	}
-	.wrapper > div {
-		width: 100%;
-	}
-
+  ul {
+    flex-direction: column;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+  .wrapper > div {
+    width: 100%;
+  }
 }
-
-
-
+/*# sourceMappingURL=style.css.map */
