@@ -92,6 +92,8 @@ ul a:visited:active {
 @media only screen and (max-width: 600px) {
   ul {
     flex-direction: column;
+    font-size: .75em;
+    height: 20vh;
   }
   .wrapper {
     flex-direction: column;
