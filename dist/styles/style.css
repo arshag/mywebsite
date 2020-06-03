@@ -17,7 +17,7 @@ ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 20vh;
+  height: 10vh;
 }
 
 /* items in the flex container */
@@ -42,11 +42,11 @@ ul a:visited:active {
 /* Hero section */
 /* Second grid item - also a flex container */
 .hero {
-  background-image: url("../images/hot-air-balloons3.jpg");
+  background-image: url("../images/hot-air-balloons1.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   display: flex;
-  height: 80vh;
+  height: 40vh;
   justify-content: center;
   align-items: center;
 }
@@ -60,9 +60,11 @@ ul a:visited:active {
 /* Main content */
 /* The third grid item, and a flex container for images */
 .wrapper {
-  margin-top: 1.5em;
+  /*margin-top: 1.5em;*/
   display: flex;
+  height: 50vh;
   align-items: flex-start;
+  background: linear-gradient(to right, #ccaadb, #e29ca2);
 }
 
 .wrapper > div {
@@ -80,6 +82,8 @@ ul a:visited:active {
 
 .img1:hover {
   transform: scale(1.5);
+  transform-origin: top;
+  transition: transform 1s ease-in-out;
 }
 
 /* Media queries for devices less than 601 pixels wide */
@@ -102,7 +106,8 @@ ul a:visited:active {
   /* 300px 300px 300px; */
   /* repeat(3,300px)*/
   grid-template-rows: 350px;
-  grid-gap: 5px;
+  grid-gap: 10px;
+  background: linear-gradient(to right, rgba(174, 143, 97, 0.589), rgba(179, 177, 97, 0.726));
 }
 
 img {
@@ -110,14 +115,14 @@ img {
 }
 
 .left {
-  background-color: #bbd;
+  background-color: #bfc7c0;
   padding: 10px;
 }
 
 .right {
   background-color: whitesmoke;
   padding: 10px;
-  border: 1px solid #bbd;
+  background-color: #a0b4a4;
 }
 
 p:first-child {
