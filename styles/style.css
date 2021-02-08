@@ -81,13 +81,12 @@ ul a:visited:active {
   vertical-align: bottom;
   transform-origin: top;
   transition: transform 1s ease;
+  transition-duration: 3s;
+  
 }
-.img1:hover {
-  transform: scale(1.5);
-  transform-origin: top;
-  transition: transform 1s ease;
+.enlarge {
+	transform: scale(1.5);
 }
-
 @media (max-aspect-ratio: 1/1) {
   .pictures > li {
     height: 30vh;
