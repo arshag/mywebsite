@@ -117,3 +117,10 @@ ul a:visited:active {
     min-width: 0;
   }
 }
+
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    height: 15vh;
+  }
+}
