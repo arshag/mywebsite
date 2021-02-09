@@ -17,7 +17,7 @@ ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 20vh;
+  height: 15vh;
 }
 
 /* items in the flex container */
@@ -42,11 +42,11 @@ ul a:visited:active {
 /* Hero section */
 /* Second grid item - also a flex container */
 .hero {
-  background-image: url("../images/hot-air-balloons3.jpg");
+  background-image: url("../images/hot-air-balloons1.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   display: flex;
-  height: 80vh;
+  height: 40vh;
   justify-content: center;
   align-items: center;
 }
@@ -57,70 +57,75 @@ ul a:visited:active {
   text-shadow: 1px 1px 2px white, 0 0 1em blue, 0 0 0.2em goldenrod;
 }
 
-/* Main content */
-/* The third grid item, and a flex container for images */
-.wrapper {
-  margin-top: 1.5em;
+
+.pictures {
   display: flex;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style-type:none;
 }
 
-.wrapper > div {
-  flex: 1 1 15vw;
-  /*transition: all 1000ms cubic-bezier(.14, .69, .93, 1);*/
+.pictures > li {
+  height: 40vh;
+  flex-grow: 1;
 }
 
-/*
-.wrapper > div:hover  {
-	flex-basis: 35vw;
-}*/
+.pictures > li:last-child {
+  flex-grow: 10;
+}
+
 .img1 {
-  width: 100%;
+  border: 1px solid white;
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+  transform-origin: top;
+  transition: transform 1s ease;
+  transition-duration: 3s;
+  
+}
+.enlarge {
+	transform: scale(1.5);
 }
 
-.img1:hover {
-  transform: scale(1.5);
+.centerimg {
+  text-align: center;
 }
 
-/* Media queries for devices less than 601 pixels wide */
-@media only screen and (max-width: 600px) {
-  ul {
-    flex-direction: column;
+@media (max-aspect-ratio: 1/1) {
+  .pictures > li {
+    height: 30vh;
   }
-  .wrapper {
-    flex-direction: column;
+}
+
+
+@media (max-height: 480px) {
+  .pictures > li {
+    height: 80vh;
   }
-  .wrapper > div {
+}
+
+
+
+@media (max-aspect-ratio: 1/1) and (max-width: 480px) {
+  .pictures {
+    flex-direction: row;
+  }
+
+  .pictures > li {
+    height: auto;
     width: 100%;
   }
+  .img1 {
+    width: 100%;
+    max-height: 75vh;
+    min-width: 0;
+  }
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  /* 1fr 1fr 2fr */
-  /* 300px 300px 300px; */
-  /* repeat(3,300px)*/
-  grid-template-rows: 350px;
-  grid-gap: 5px;
-}
-
-img {
-  width: 100%;
-}
-
-.left {
-  background-color: #bbd;
-  padding: 10px;
-}
-
-.right {
-  background-color: whitesmoke;
-  padding: 10px;
-  border: 1px solid #bbd;
-}
-
-p:first-child {
-  text-align: center;
-  padding: 5px 0;
+@media (max-width: 600px) {
+  .menu {
+    flex-direction: column;
+    height: 15vh;
+  }
 }

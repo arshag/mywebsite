@@ -1,36 +1,118 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<link href="styles/style.css" rel="stylesheet">
-	<title>Gallery</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-		
-		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="gardening.html">Flowers and Vegetables</a></li>
-			<li><a href="about.html">About</a></li>
-		</ul>
-			
-		<div class='hero'>
-			<h1>Gallery</h1>
-		</div>
-			
-		<div class="wrapper">
-			<div><img class="img1" src="images/pic1.jpg"></div>
-			<div><img class="img1" src="images/pic2.jpg"></div>
-            <div><img class="img1" src="images/pic3.jpg"></div>	
-            <div><img class="img1" src="images/pic4.jpg"></div>
-            <div><img class="img1" src="images/pic5.jpg"></div>
-            <div><img class="img1" src="images/pic6.jpg"></div>
-            <div><img class="img1" src="images/pic7.jpg"></div>
-            <div><img class="img1" src="images/pic8.jpg"></div>
-            <div><img class="img1" src="images/pic9.jpg"></div>
-            <div><img class="img1" src="images/pic11.jpg"></div>
-            <div><img class="img1" src="images/pic12.jpg"></div>
-            <div><img class="img1" src="images/pic13.jpg"></div>		
-		</div>
-	
-</body>
+  <head>
+    <meta name="generator"
+    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Baby</title>
+  </head>
+  <body>
+    <ul class="menu">
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a href="gardening.html">Garden</a>
+      </li>
+      <li>
+        <a href="about.html">About</a>
+      </li>
+    </ul>
+    <div class='hero'>
+      <h1>Gallery</h1>
+    </div>
+    <ul class="pictures">
+      <li>
+        <img class="img1" src="images/pic1.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic2.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic3.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic4.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic5.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic6.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic7.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic8.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic9.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic11.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic12.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic13.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic14.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic15.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic16.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic17.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic18.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic19.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic20.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic21.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic22.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic23.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic24.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic25.jpg" loading="lazy" />
+      </li>
+      <li>
+        <img class="img1" src="images/pic26.jpg" loading="lazy" />
+      </li>
+    </ul>
+    <script>
+        
+        const images = document.querySelectorAll('.img1');
+        function enlarge() {
+          this.classList.add('enlarge');
+        }
+        function removeTransition(e) {
+          if (e.propertyName !== 'transform') return;
+		  this.classList.remove('enlarge');
+          
+        }
+        images.forEach(panel => panel.addEventListener('mousedown', enlarge));
+        images.forEach(panel => panel.addEventListener('transitionend', removeTransition));
+		images.forEach(panel => panel.addEventListener('mouseleave', removeTransition));
+    </script>
+  </body>
 </html>
