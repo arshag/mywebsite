@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    
+    <style>
+        .container {
+            width: 300px;
+        }
+        .grid {
+            display: grid;
+            grid-gap: 1px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 100px);
+        }
+
+        .grid > div {
+            padding: 10px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <h2>You are player 1, the computer is player 2</h2>
+    <div class="container">
+        <div class="grid">
+            <div data-pos="0" class="cell"></div>
+            <div data-pos="1" class="cell"></div>
+            <div data-pos="2" class="cell"></div>
+            <div data-pos="3" class="cell"></div>
+            <div data-pos="4" class="cell"></div>
+            <div data-pos="5" class="cell"></div>
+            <div data-pos="6" class="cell"></div>
+            <div data-pos="7" class="cell"></div>
+            <div data-pos="8" class="cell"></div>  
+        </div>
+    </div>
+    <div id="status"></div>
+    <script src="tictactoe.js"></script>
+</body>
+</html>
