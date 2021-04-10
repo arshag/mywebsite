@@ -16,7 +16,7 @@ ul {
   display:flex;
   justify-content: space-around;
   align-items: center;
-  height: 20vh;
+  height: 10vh;
 }
 /* items in the flex container */
 ul li {
@@ -41,11 +41,11 @@ ul a:visited:active {
 /* Second grid item - also a flex container */
 .hero  {
   
-  background-image: url("../images/hot-air-balloons3.jpg");
+  background-image: url("../images/hot-air-balloons1.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   display:flex;
-  height: 80vh;
+  height: 40vh;
   justify-content:center;
 	align-items:center;
 }
@@ -59,9 +59,11 @@ ul a:visited:active {
 /* Main content */
 /* The third grid item, and a flex container for images */
 .wrapper {
-	margin-top: 1.5em;
+	/*margin-top: 1.5em;*/
 	display: flex;
+	height: 50vh;
 	align-items: flex-start;
+	background: linear-gradient(to right, rgb(204, 170, 219),rgb(226, 156, 162));
 }
 .wrapper > div {
 	flex: 1 1 15vw;
@@ -74,16 +76,23 @@ ul a:visited:active {
 }*/
 .img1 {
 	width: 100%;
+	transform-origin: top;
+	transition: transform 1s ease;
 }
 
 .img1:hover {
-	transform: scale(1.5);
+	transform: scale(1.30);
+	transform-origin: top;
+	transition: transform 1s ease;
+	
 }
 
 /* Media queries for devices less than 601 pixels wide */
 @media only screen and (max-width: 600px) {
 	ul {
 		flex-direction: column;
+		font-size: .75em;
+		height: 20vh;
 	}
 	.wrapper {
 		flex-direction: column;

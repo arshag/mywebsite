@@ -6,20 +6,20 @@
 													/* 300px 300px 300px; */
 													/* repeat(3,300px)*/
 	grid-template-rows: 350px ;
-	grid-gap: 5px;
-	
+	grid-gap: 10px;
+	background: linear-gradient(to right, hsla(36, 32%, 53%, 0.589), hsla(59, 35%, 54%, 0.726));
 	}
 img {
 	width: 100%;
 	}
 .left {
-	background-color: #bbd;
+	background-color: rgb(191, 199, 192);
 	padding: 10px;
 	}
 .right{
 	background-color: whitesmoke;
     padding: 10px;
-    border: 1px solid #bbd;
+    background-color: rgb(160, 180, 164);;
 	}
 p:first-child {
     text-align: center;
