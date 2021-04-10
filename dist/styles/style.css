@@ -61,7 +61,7 @@ ul a:visited:active {
   display: flex;
   flex-wrap: wrap;
   list-style-type:none;
-
+}
 /* Main content */
 /* The third grid item, and a flex container for images */
 .wrapper {
