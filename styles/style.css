@@ -114,7 +114,7 @@ ul a:visited:active {
 	flex-basis: 35vw;
 }*/
 .img1 {
-  width: 100%;
+  /*width: 100%;*/
   transform-origin: top;
   transition: transform 1s ease;
 }
