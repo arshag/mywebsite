@@ -26,7 +26,7 @@ function markCell(e) {
     board[boardX][boardY] = player;
 
     if (gameOverCheck()) {
-        state.innerHTML = `<h2>Game over - Player ${player} Wins - Click anywhere on board to start a new game<h2>`;
+        state.innerHTML = `<h2>Game over - You Win - \nClick anywhere on board to start a new game<h2>`;
         reset = true;
     }
     else if (turns == 9) {
@@ -238,7 +238,7 @@ function computerMoves(e) {
         firstPosAvailable();
     }
     if (gameOverCheck()) {
-        state.innerHTML = `<h2>Game over - Player ${player} Wins - \nClick anywhere on board to start a new game<h2>`;
+        state.innerHTML = `<h2>Game over - Computer Wins - \nClick anywhere on board to start a new game<h2>`;
         reset = true;
     }
     else {
