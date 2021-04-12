@@ -1,3 +1,4 @@
+// written by J Klavanian
 var player = 0;
 var board = [
     [-1,-1,-1],
@@ -8,7 +9,7 @@ var reset = false;
 var turns = 1;
 var gameOver = false;
 var state = document.getElementById("status");
-state.innerHTML = `<h2>Game On - Player ${player}'s Turn<h2>`;
+state.innerHTML = `<h2>Game On - Your turn`;
 let event = new Event('reset');
 
 function markCell(e) {
@@ -260,7 +261,7 @@ function resetGame() {
     }
     turns = 1;
     gameOver = false;
-    state.innerHTML = `<h2>Game On - Player ${player}'s Turn<h2>`;
+    state.innerHTML = `<h2>Game On - Your turn`;
     reset = false;
 }
 
