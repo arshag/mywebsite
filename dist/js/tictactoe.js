@@ -86,15 +86,15 @@ function winningPos() {
     var pos;
     for (var i = 0; i<3; i++) {
         if (JSON.stringify(board[i]) === JSON.stringify([-1,2,2])) {
-            pos = i+0;
+            pos = i*3+0;
             break;
         }
         if (JSON.stringify(board[i]) === JSON.stringify([2,-1,2])) {
-            pos = i+1;
+            pos = i*3+1;
             break;
         }
         if (JSON.stringify(board[i]) === JSON.stringify([2,2,-1])) {
-            pos = i+2;
+            pos = i*3+2;
             break;
         }
         if (JSON.stringify(board.map(function(value, index) { return value[i];}))=== JSON.stringify([-1,2,2])) {
